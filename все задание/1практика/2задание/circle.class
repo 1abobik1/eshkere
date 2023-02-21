@@ -1,5 +1,5 @@
-#ifndef CIRCLE_CIRCLE_H
-#define CIRCLE_CIRCLE_H
+#ifndef CIRCLE_CIRCLE_CLASS
+#define CIRCLE_CIRCLE_CLASS
 
 class Circle {
 private:
