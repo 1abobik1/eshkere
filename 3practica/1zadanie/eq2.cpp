@@ -13,35 +13,22 @@ void eq2::get(double& a1, double& b1, double& c1)
 	b1 = b;
 	c1 = c;
 }
-double eq2::find_x() {
-		double x = 0;
-		if (d < 0) {
-			cout << "korney net";
-			return 0;
-		}
-		if (d == 0) {
-			cout << "koren 1";
-			x = (b - sqrt(d)) / (2 * a);
-			cout << x << endl;
-			return x;
-		}
-		else {
-			cout << "2 kornya";
-			double x1 = (-b - sqrt(d)) / (2 * a);
-			double x2 = (-b + sqrt(d)) / (2 * a);
-			if (x1 > x2) {
-				cout << x1 << endl;
-				return x1;
-			}
-			else {
-				cout << x2 << endl;
-				return x2;
-			}
-		}
+double eq2::find_X()
+{
+	if (D < 0) 
+	{ 
+		//?
 	}
-double eq2::find_y(double x1) {
-		return a * x1 * x1 + b * x1 + c;
-	}
+	double x1, x2;
+	x1 = (-b + sqrt(D)) / (2 * a);
+	x2 = (-b - sqrt(D)) / (2 * a);
+	if (x1 >= x2) return x1;
+	else return x2;
+}
+double eq2::find_Y(double x)
+{
+	return a * pow(x, 2) + b * x + c;
+}
 
 eq2 operator + (eq2 u1, eq2 u2)
 {
